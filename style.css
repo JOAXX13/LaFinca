@@ -80,11 +80,10 @@ footer .col img {
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* 5 columnas */
+    /* 5 columnas por defecto */
     grid-template-rows: repeat(3, auto);
     /* 3 filas */
     gap: 20px;
-    /* Espacio entre las imágenes */
     justify-items: center;
     /* Centrar las imágenes en las columnas */
     align-items: center;
@@ -93,15 +92,74 @@ footer .col img {
 }
 
 .grid-item img {
-    width: 100px;
-    /* Ajusta el tamaño de las imágenes */
+    width: 100%;
+    /* Las imágenes ocuparán todo el ancho del contenedor */
+    max-width: 120px;
+    /* Limita el ancho máximo de las imágenes */
     height: auto;
     cursor: pointer;
-    /* Cambia el cursor al pasar sobre la imagen */
+    transition: transform 0.3s ease;
+    /* Añadir transición para efectos */
+}
+
+.grid-item img:hover {
+    transform: scale(1.1);
+    /* Efecto al pasar el ratón sobre la imagen */
 }
 
 .modal img {
-    width: 20%;
+    width: 50%;
     /* Imagen más grande en la modal */
     height: auto;
+}
+
+.modal img:hover {
+    filter: brightness(0.7);
+    /* Reduce el brillo al 70%, oscureciendo la imagen */
+    transition: filter 0.3s ease;
+    /* Transición suave para el cambio de brillo */
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columnas para pantallas medianas */
+    }
+
+    .grid-item img {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas en pantallas más pequeñas */
+    }
+
+    .grid-item img {
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en pantallas aún más pequeñas */
+    }
+
+    .grid-item img {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+        /* 1 columna en pantallas muy pequeñas */
+    }
+
+    .grid-item img {
+        max-width: 70px;
+    }
 }
