@@ -1,0 +1,107 @@
+.bg-menu {
+    background-color: #3bcdf6;
+}
+
+.navbar-nav a:hover {
+    color: white;
+}
+
+footer {
+    background-color: #3bcdf6;
+}
+
+footer .col img {
+    width: 24px;
+    /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    margin: 0 10px;
+    /* Espacio entre las imágenes */
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* El carrusel ocupa toda la altura de la ventana */
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 100vh;
+    /* Cada imagen del carrusel también ocupa toda la altura */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    /* Las imágenes cubren todo el área del carrusel sin distorsión */
+    height: 100%;
+}
+
+.carousel-caption-static {
+    position: absolute;
+    top: 50%;
+    /* Posiciona el texto en el centro vertical de la pantalla */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Mejora la visibilidad del texto sobre las imágenes */
+    z-index: 10;
+    /* Asegura que el texto esté por encima de las imágenes */
+    width: 100%;
+}
+
+.carousel-caption-static h3,
+.carousel-caption-static p {
+    margin: 0;
+}
+
+.carousel-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-item {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.imagenes {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagenes h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 columnas */
+    grid-template-rows: repeat(3, auto);
+    /* 3 filas */
+    gap: 20px;
+    /* Espacio entre las imágenes */
+    justify-items: center;
+    /* Centrar las imágenes en las columnas */
+    align-items: center;
+    /* Centrar las imágenes en las filas */
+    padding: 20px;
+}
+
+.grid-item img {
+    width: 100px;
+    /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.modal img {
+    width: 20%;
+    /* Imagen más grande en la modal */
+    height: auto;
+}
